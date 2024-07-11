@@ -8,6 +8,7 @@ import { StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { provideHttpClient } from '@angular/common/http';
+import { APP_BASE_HREF } from '@angular/common';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -19,6 +20,7 @@ export const appConfig: ApplicationConfig = {
       StoreRouterConnectingModule.forRoot(),
       StoreDevtoolsModule.instrument(),
       EffectsModule.forRoot([]),
-    )
+    ),
+    {provide: APP_BASE_HREF, useValue: '/test-identity/'}
   ]
 };

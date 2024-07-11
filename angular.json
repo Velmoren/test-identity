@@ -104,7 +104,17 @@
 						],
 						"scripts": []
 					}
-				}
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "buildTarget": "myrtex-mf-identity:build:production",
+            "repo": "https://github.com/Velmoren/test-identity.git",
+            "baseHref": "/test-identity/",
+            "dir": "dist/myrtex-mf-identity/",
+            "noNojekyll": true
+          }
+        }
 			}
 		}
 	},
